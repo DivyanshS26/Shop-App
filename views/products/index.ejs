@@ -1,4 +1,3 @@
-
 <%- include("../partials/header") %> 
 <%- include("../partials/navbar") %> 
 
@@ -12,6 +11,7 @@
         <h4 class="display-5"><i class="fab fa-shopify" style="margin-right: 20px;"></i>Shopping-Cart</h4>
   
     </section>
+
     <div class="row">
         <% for(let product of products){ %> 
             <div class="col-lg-4 col-md-6 mb-3">
@@ -21,7 +21,7 @@
                       <h5 class="card-title"><%=product.name%> </h5>
                       <p class="card-text"><%=product.desc.substring(0,100)%></p>
                       <h5 class="card-title">&#x20B9 <%=product.price%></h5>
-                      <a href="/products/<%= product._id %>" class="btn btn-outline-primary">Buy Now</a>
+                      <a href="/products/<%=product._id%>" class="btn btn-outline-primary">Buy Now</a>
                     </div>
                   </div>
             </div>
